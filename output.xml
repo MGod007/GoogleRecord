@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0 (Python 3.12.4 on win32)" generated="20240714 01:16:26.921" rpa="false" schemaversion="3">
+<suite id="s1" name="Test" source="E:\AutomationProjects\GoogleRecord\test.robot">
+<test id="s1-t1" name="TC01 - Navigate to google.com" line="5">
+<kw name="Open Browser and Navigate to google" library="keywords">
+<kw name="Open Browser" library="Browser">
+<arg>browser=Chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<msg timestamp="20240714 01:16:29.193" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20240714 01:16:29.194" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "E:\\AutomationProjects\\GoogleRecord\\browser\\traces\\48b96d4c-a886-4912-b3af-22bcb7d9e544"}</msg>
+<msg timestamp="20240714 01:16:29.436" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"E:\\AutomationProjects\\GoogleRecord\\browser\\traces\\48b96d4c-a886-4912-b3af-22bcb7d9e544"}</msg>
+<msg timestamp="20240714 01:16:29.436" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg timestamp="20240714 01:16:29.451" level="INFO">Successfully created context. </msg>
+<msg timestamp="20240714 01:16:29.451" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg timestamp="20240714 01:16:29.915" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
+<status status="PASS" starttime="20240714 01:16:29.192" endtime="20240714 01:16:29.917"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>url=https://www.google.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20240714 01:16:31.821" level="INFO">Successfully initialized new page object and opened url: https://www.google.com</msg>
+<status status="PASS" starttime="20240714 01:16:29.918" endtime="20240714 01:16:31.822"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240714 01:16:34.824" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240714 01:16:31.822" endtime="20240714 01:16:34.824"/>
+</kw>
+<status status="PASS" starttime="20240714 01:16:29.192" endtime="20240714 01:16:34.824"/>
+</kw>
+<kw name="Search from excel" library="keywords">
+<kw name="Readexcel" library="util">
+<var>${excelvalue}</var>
+<msg timestamp="20240714 01:16:34.824" level="INFO">${excelvalue} = ['Java', 'Python', 'Selenium']</msg>
+<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:34.824"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${excelvalue}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240714 01:16:34.824" level="INFO">['Java', 'Python', 'Selenium']</msg>
+<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:34.824"/>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<var>${count}</var>
+<arg>${excelvalue}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<msg timestamp="20240714 01:16:34.824" level="INFO">Length is 3</msg>
+<msg timestamp="20240714 01:16:34.824" level="INFO">${count} = 3</msg>
+<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:34.824"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>${count}</value>
+<iter>
+<var name="${i}">0</var>
+<kw name="Fill Text" library="Browser">
+<arg>id=${searchbox}</arg>
+<arg>txt=${excelvalue}[${i}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240714 01:16:34.824" level="INFO">Fills the text 'Java' in the given field.</msg>
+<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:34.883"/>
+</kw>
+<kw name="Keyboard Key" library="Browser">
+<arg>press</arg>
+<arg>key=Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
+<status status="PASS" starttime="20240714 01:16:34.883" endtime="20240714 01:16:34.894"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>xpath=${searchbtn}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240714 01:16:34.894" level="INFO">Clicks the element 'xpath=(//input[@name='btnK'])[2]'.</msg>
+<status status="PASS" starttime="20240714 01:16:34.894" endtime="20240714 01:16:35.103"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20240714 01:16:35.331" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240714 01:16:35.104" endtime="20240714 01:16:35.331"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>xpath=${googlelogo}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240714 01:16:35.331" level="INFO">Clicks the element 'xpath=//img[@Class='jfN4p']'.</msg>
+<status status="PASS" starttime="20240714 01:16:35.331" endtime="20240714 01:16:35.761"/>
+</kw>
+<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:35.761"/>
+</iter>
+<iter>
+<var name="${i}">1</var>
+<kw name="Fill Text" library="Browser">
+<arg>id=${searchbox}</arg>
+<arg>txt=${excelvalue}[${i}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240714 01:16:35.761" level="INFO">Fills the text 'Python' in the given field.</msg>
+<status status="PASS" starttime="20240714 01:16:35.761" endtime="20240714 01:16:36.259"/>
+</kw>
+<kw name="Keyboard Key" library="Browser">
+<arg>press</arg>
+<arg>key=Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
+<status status="PASS" starttime="20240714 01:16:36.259" endtime="20240714 01:16:36.270"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>xpath=${searchbtn}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240714 01:16:36.270" level="INFO">Clicks the element 'xpath=(//input[@name='btnK'])[2]'.</msg>
+<status status="PASS" starttime="20240714 01:16:36.270" endtime="20240714 01:16:36.486"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20240714 01:16:36.640" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240714 01:16:36.486" endtime="20240714 01:16:36.640"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>xpath=${googlelogo}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240714 01:16:36.640" level="INFO">Clicks the element 'xpath=//img[@Class='jfN4p']'.</msg>
+<status status="PASS" starttime="20240714 01:16:36.640" endtime="20240714 01:16:37.199"/>
+</kw>
+<status status="PASS" starttime="20240714 01:16:35.761" endtime="20240714 01:16:37.199"/>
+</iter>
+<iter>
+<var name="${i}">2</var>
+<kw name="Fill Text" library="Browser">
+<arg>id=${searchbox}</arg>
+<arg>txt=${excelvalue}[${i}]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<msg timestamp="20240714 01:16:37.199" level="INFO">Fills the text 'Selenium' in the given field.</msg>
+<status status="PASS" starttime="20240714 01:16:37.199" endtime="20240714 01:16:37.502"/>
+</kw>
+<kw name="Keyboard Key" library="Browser">
+<arg>press</arg>
+<arg>key=Tab</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
+<status status="PASS" starttime="20240714 01:16:37.502" endtime="20240714 01:16:37.529"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>xpath=${searchbtn}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240714 01:16:37.529" level="INFO">Clicks the element 'xpath=(//input[@name='btnK'])[2]'.</msg>
+<status status="PASS" starttime="20240714 01:16:37.529" endtime="20240714 01:16:37.754"/>
+</kw>
+<kw name="Take Screenshot" library="Browser">
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<msg timestamp="20240714 01:16:37.928" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240714 01:16:37.754" endtime="20240714 01:16:37.928"/>
+</kw>
+<kw name="Click" library="Browser">
+<arg>xpath=${googlelogo}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<msg timestamp="20240714 01:16:37.928" level="INFO">Clicks the element 'xpath=//img[@Class='jfN4p']'.</msg>
+<status status="PASS" starttime="20240714 01:16:37.928" endtime="20240714 01:16:38.459"/>
+</kw>
+<status status="PASS" starttime="20240714 01:16:37.199" endtime="20240714 01:16:38.459"/>
+</iter>
+<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:38.460"/>
+</for>
+<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:38.460"/>
+</kw>
+<status status="PASS" starttime="20240714 01:16:29.179" endtime="20240714 01:16:38.462"/>
+</test>
+<status status="PASS" starttime="20240714 01:16:26.921" endtime="20240714 01:16:38.574"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240714 01:16:29.193" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>
