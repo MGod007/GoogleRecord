@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0 (Python 3.12.4 on win32)" generated="20240714 01:16:26.921" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0 (Python 3.12.4 on win32)" generated="20240714 18:52:23.452" rpa="false" schemaversion="3">
 <suite id="s1" name="Test" source="E:\AutomationProjects\GoogleRecord\test.robot">
-<test id="s1-t1" name="TC01 - Navigate to google.com" line="5">
+<test id="s1-t1" name="TC01 - Add all the records fetched from google search to excel" line="5">
 <kw name="Open Browser and Navigate to google" library="keywords">
 <kw name="Open Browser" library="Browser">
 <arg>browser=Chromium</arg>
@@ -9,10 +9,10 @@
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
-<msg timestamp="20240714 01:16:29.193" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg timestamp="20240714 01:16:29.194" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "E:\\AutomationProjects\\GoogleRecord\\browser\\traces\\48b96d4c-a886-4912-b3af-22bcb7d9e544"}</msg>
-<msg timestamp="20240714 01:16:29.436" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"E:\\AutomationProjects\\GoogleRecord\\browser\\traces\\48b96d4c-a886-4912-b3af-22bcb7d9e544"}</msg>
-<msg timestamp="20240714 01:16:29.436" level="INFO">{
+<msg timestamp="20240714 18:52:24.898" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20240714 18:52:24.914" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "E:\\AutomationProjects\\GoogleRecord\\browser\\traces\\19463fea-f65d-47f7-a429-a8e5b0aa0e2c"}</msg>
+<msg timestamp="20240714 18:52:25.195" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"E:\\AutomationProjects\\GoogleRecord\\browser\\traces\\19463fea-f65d-47f7-a429-a8e5b0aa0e2c"}</msg>
+<msg timestamp="20240714 18:52:25.195" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": true,
   "forcedColors": "none",
@@ -26,46 +26,54 @@
     "height": 720
   }
 }</msg>
-<msg timestamp="20240714 01:16:29.451" level="INFO">Successfully created context. </msg>
-<msg timestamp="20240714 01:16:29.451" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
-<msg timestamp="20240714 01:16:29.915" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
-<status status="PASS" starttime="20240714 01:16:29.192" endtime="20240714 01:16:29.917"/>
+<msg timestamp="20240714 18:52:25.215" level="INFO">Successfully created context. </msg>
+<msg timestamp="20240714 18:52:25.215" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg timestamp="20240714 18:52:25.564" level="INFO">Successfully initialized new page object and opened url: about:blank</msg>
+<status status="PASS" starttime="20240714 18:52:24.898" endtime="20240714 18:52:25.564"/>
 </kw>
 <kw name="New Page" library="Browser">
 <arg>url=https://www.google.com</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20240714 01:16:31.821" level="INFO">Successfully initialized new page object and opened url: https://www.google.com</msg>
-<status status="PASS" starttime="20240714 01:16:29.918" endtime="20240714 01:16:31.822"/>
+<msg timestamp="20240714 18:52:27.235" level="INFO">Successfully initialized new page object and opened url: https://www.google.com</msg>
+<status status="PASS" starttime="20240714 18:52:25.564" endtime="20240714 18:52:27.235"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240714 01:16:34.824" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20240714 01:16:31.822" endtime="20240714 01:16:34.824"/>
+<msg timestamp="20240714 18:52:30.235" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20240714 18:52:27.235" endtime="20240714 18:52:30.235"/>
 </kw>
-<status status="PASS" starttime="20240714 01:16:29.192" endtime="20240714 01:16:34.824"/>
+<status status="PASS" starttime="20240714 18:52:24.898" endtime="20240714 18:52:30.235"/>
 </kw>
+<kw name="Add Searched Records to Excel" library="keywords">
 <kw name="Search from excel" library="keywords">
+<var>${exceldata}</var>
 <kw name="Readexcel" library="util">
 <var>${excelvalue}</var>
-<msg timestamp="20240714 01:16:34.824" level="INFO">${excelvalue} = ['Java', 'Python', 'Selenium']</msg>
-<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:34.824"/>
+<msg timestamp="20240714 18:52:30.242" level="INFO">${excelvalue} = ['Java', 'Python', 'Selenium']</msg>
+<status status="PASS" starttime="20240714 18:52:30.235" endtime="20240714 18:52:30.242"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${excelvalue}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20240714 01:16:34.824" level="INFO">['Java', 'Python', 'Selenium']</msg>
-<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:34.824"/>
+<msg timestamp="20240714 18:52:30.242" level="INFO">['Java', 'Python', 'Selenium']</msg>
+<status status="PASS" starttime="20240714 18:52:30.242" endtime="20240714 18:52:30.242"/>
 </kw>
 <kw name="Get Length" library="BuiltIn">
 <var>${count}</var>
 <arg>${excelvalue}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<msg timestamp="20240714 01:16:34.824" level="INFO">Length is 3</msg>
-<msg timestamp="20240714 01:16:34.824" level="INFO">${count} = 3</msg>
-<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:34.824"/>
+<msg timestamp="20240714 18:52:30.242" level="INFO">Length is 3</msg>
+<msg timestamp="20240714 18:52:30.242" level="INFO">${count} = 3</msg>
+<status status="PASS" starttime="20240714 18:52:30.242" endtime="20240714 18:52:30.242"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{All_Records}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20240714 18:52:30.242" level="INFO">@{All_Records} = [ ]</msg>
+<status status="PASS" starttime="20240714 18:52:30.242" endtime="20240714 18:52:30.242"/>
 </kw>
 <for flavor="IN RANGE">
 <var>${i}</var>
@@ -78,8 +86,8 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20240714 01:16:34.824" level="INFO">Fills the text 'Java' in the given field.</msg>
-<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:34.883"/>
+<msg timestamp="20240714 18:52:30.242" level="INFO">Fills the text 'Java' in the given field.</msg>
+<status status="PASS" starttime="20240714 18:52:30.242" endtime="20240714 18:52:30.314"/>
 </kw>
 <kw name="Keyboard Key" library="Browser">
 <arg>press</arg>
@@ -87,31 +95,514 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
-<status status="PASS" starttime="20240714 01:16:34.883" endtime="20240714 01:16:34.894"/>
+<status status="PASS" starttime="20240714 18:52:30.316" endtime="20240714 18:52:30.327"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>xpath=${searchbtn}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20240714 01:16:34.894" level="INFO">Clicks the element 'xpath=(//input[@name='btnK'])[2]'.</msg>
-<status status="PASS" starttime="20240714 01:16:34.894" endtime="20240714 01:16:35.103"/>
+<msg timestamp="20240714 18:52:30.327" level="INFO">Clicks the element 'xpath=(//input[@name='btnK'])[2]'.</msg>
+<status status="PASS" starttime="20240714 18:52:30.327" endtime="20240714 18:52:30.638"/>
 </kw>
 <kw name="Take Screenshot" library="Browser">
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<msg timestamp="20240714 01:16:35.331" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240714 01:16:35.104" endtime="20240714 01:16:35.331"/>
+<msg timestamp="20240714 18:52:31.245" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240714 18:52:30.638" endtime="20240714 18:52:31.245"/>
 </kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>xpath=(${googleSearchRecords})[1]</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20240714 18:52:31.391" level="INFO">Waited for Element with selector xpath=(//h3[@class='LC20lb MBeuO DKV0Md'])[1] at state visible</msg>
+<status status="PASS" starttime="20240714 18:52:31.245" endtime="20240714 18:52:31.391"/>
+</kw>
+<kw name="Get Elements" library="Browser">
+<var>${g_results}</var>
+<arg>xpath=${googleSearchRecords}</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.439" level="INFO">Found locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').first(),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(1),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(2),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(3),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(4),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(5),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(6),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(7),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(8),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(9),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(10),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(11),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(12),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(13),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(14),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(15),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(16) Locators successfully.</msg>
+<msg timestamp="20240714 18:52:31.439" level="INFO">${g_results} = ["xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=0", "xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=1", "xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=2", "xpath=//h3[@class='LC20lb MBeuO DKV0Md'...</msg>
+<status status="PASS" starttime="20240714 18:52:31.391" endtime="20240714 18:52:31.439"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{g_results}</value>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=0</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.473" level="INFO">Text: 'Java | Oracle'</msg>
+<msg timestamp="20240714 18:52:31.473" level="INFO">${text} = Java | Oracle</msg>
+<status status="PASS" starttime="20240714 18:52:31.442" endtime="20240714 18:52:31.473"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.475" endtime="20240714 18:52:31.475"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.474" endtime="20240714 18:52:31.475"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.473" endtime="20240714 18:52:31.475"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.442" endtime="20240714 18:52:31.475"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=1</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.495" level="INFO">Text: 'Java Tutorial'</msg>
+<msg timestamp="20240714 18:52:31.495" level="INFO">${text} = Java Tutorial</msg>
+<status status="PASS" starttime="20240714 18:52:31.475" endtime="20240714 18:52:31.495"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.495" endtime="20240714 18:52:31.496"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.495" endtime="20240714 18:52:31.496"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.495" endtime="20240714 18:52:31.497"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.475" endtime="20240714 18:52:31.497"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=2</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.512" level="INFO">Text: 'Java.Oracle.com'</msg>
+<msg timestamp="20240714 18:52:31.512" level="INFO">${text} = Java.Oracle.com</msg>
+<status status="PASS" starttime="20240714 18:52:31.497" endtime="20240714 18:52:31.512"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.513" endtime="20240714 18:52:31.513"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.513" endtime="20240714 18:52:31.513"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.512" endtime="20240714 18:52:31.513"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.497" endtime="20240714 18:52:31.513"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=3</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.528" level="INFO">Text: 'Java Downloads'</msg>
+<msg timestamp="20240714 18:52:31.528" level="INFO">${text} = Java Downloads</msg>
+<status status="PASS" starttime="20240714 18:52:31.513" endtime="20240714 18:52:31.528"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.529" endtime="20240714 18:52:31.530"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.529" endtime="20240714 18:52:31.530"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.529" endtime="20240714 18:52:31.530"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.513" endtime="20240714 18:52:31.530"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=4</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.536" level="INFO">Text: 'What is Java? - Java Programming Language Explained - AWS'</msg>
+<msg timestamp="20240714 18:52:31.544" level="INFO">${text} = What is Java? - Java Programming Language Explained - AWS</msg>
+<status status="PASS" starttime="20240714 18:52:31.530" endtime="20240714 18:52:31.544"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.544" endtime="20240714 18:52:31.544"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.544" endtime="20240714 18:52:31.544"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.544" endtime="20240714 18:52:31.545"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.530" endtime="20240714 18:52:31.545"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=5</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.559" level="INFO">Text: 'Increment and Decrement Operators in Java - Dummies.com'</msg>
+<msg timestamp="20240714 18:52:31.559" level="INFO">${text} = Increment and Decrement Operators in Java - Dummies.com</msg>
+<status status="PASS" starttime="20240714 18:52:31.545" endtime="20240714 18:52:31.559"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.560" endtime="20240714 18:52:31.560"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.560" endtime="20240714 18:52:31.560"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.559" endtime="20240714 18:52:31.560"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.545" endtime="20240714 18:52:31.560"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=6</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.577" level="INFO">Text: 'How to Program in Java: 3 Steps (with Pictures) - wikiHow'</msg>
+<msg timestamp="20240714 18:52:31.577" level="INFO">${text} = How to Program in Java: 3 Steps (with Pictures) - wikiHow</msg>
+<status status="PASS" starttime="20240714 18:52:31.562" endtime="20240714 18:52:31.577"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.578" endtime="20240714 18:52:31.578"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.577" endtime="20240714 18:52:31.578"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.577" endtime="20240714 18:52:31.578"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.560" endtime="20240714 18:52:31.578"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=7</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.595" level="INFO">Text: 'What Is Java? - IBM'</msg>
+<msg timestamp="20240714 18:52:31.595" level="INFO">${text} = What Is Java? - IBM</msg>
+<status status="PASS" starttime="20240714 18:52:31.578" endtime="20240714 18:52:31.595"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.595" endtime="20240714 18:52:31.595"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.595" endtime="20240714 18:52:31.596"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.595" endtime="20240714 18:52:31.596"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.578" endtime="20240714 18:52:31.596"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=8</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.618" level="INFO">Text: 'What Is The Future Of Java Developers - SkillVertex'</msg>
+<msg timestamp="20240714 18:52:31.618" level="INFO">${text} = What Is The Future Of Java Developers - SkillVertex</msg>
+<status status="PASS" starttime="20240714 18:52:31.596" endtime="20240714 18:52:31.618"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.618" endtime="20240714 18:52:31.618"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.618" endtime="20240714 18:52:31.618"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.618" endtime="20240714 18:52:31.618"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.596" endtime="20240714 18:52:31.618"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=9</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.640" level="INFO">Text: 'Is Java Difficult to Learn? Explore the Challenges! - Simplilearn.com'</msg>
+<msg timestamp="20240714 18:52:31.640" level="INFO">${text} = Is Java Difficult to Learn? Explore the Challenges! - Simplilearn.com</msg>
+<status status="PASS" starttime="20240714 18:52:31.618" endtime="20240714 18:52:31.640"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.640" endtime="20240714 18:52:31.640"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.640" endtime="20240714 18:52:31.640"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.640" endtime="20240714 18:52:31.640"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.618" endtime="20240714 18:52:31.640"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=10</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.665" level="INFO">Text: 'What is Java Used For in 2023? The Java Programming Language and ...'</msg>
+<msg timestamp="20240714 18:52:31.665" level="INFO">${text} = What is Java Used For in 2023? The Java Programming Language and ...</msg>
+<status status="PASS" starttime="20240714 18:52:31.645" endtime="20240714 18:52:31.665"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.665" endtime="20240714 18:52:31.665"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.665" endtime="20240714 18:52:31.665"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.665" endtime="20240714 18:52:31.665"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.640" endtime="20240714 18:52:31.665"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=11</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.687" level="INFO">Text: 'What is the full form of Java? - Tutorialspoint'</msg>
+<msg timestamp="20240714 18:52:31.687" level="INFO">${text} = What is the full form of Java? - Tutorialspoint</msg>
+<status status="PASS" starttime="20240714 18:52:31.665" endtime="20240714 18:52:31.687"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.687" endtime="20240714 18:52:31.689"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.687" endtime="20240714 18:52:31.689"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.687" endtime="20240714 18:52:31.689"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.665" endtime="20240714 18:52:31.689"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=12</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.712" level="INFO">Text: "What is Java?—Beginner's Guide to Java | Microsoft Azure"</msg>
+<msg timestamp="20240714 18:52:31.712" level="INFO">${text} = What is Java?—Beginner's Guide to Java | Microsoft Azure</msg>
+<status status="PASS" starttime="20240714 18:52:31.689" endtime="20240714 18:52:31.712"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.713" endtime="20240714 18:52:31.713"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.713" endtime="20240714 18:52:31.713"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.712" endtime="20240714 18:52:31.713"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.689" endtime="20240714 18:52:31.713"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=13</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.733" level="INFO">Text: 'What Is Java? - IBM'</msg>
+<msg timestamp="20240714 18:52:31.733" level="INFO">${text} = What Is Java? - IBM</msg>
+<status status="PASS" starttime="20240714 18:52:31.713" endtime="20240714 18:52:31.733"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.733" endtime="20240714 18:52:31.733"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.733" endtime="20240714 18:52:31.733"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.733" endtime="20240714 18:52:31.733"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.713" endtime="20240714 18:52:31.733"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=14</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.903" level="INFO">Text: 'Java Tutorial'</msg>
+<msg timestamp="20240714 18:52:31.905" level="INFO">${text} = Java Tutorial</msg>
+<status status="PASS" starttime="20240714 18:52:31.733" endtime="20240714 18:52:31.905"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.905" endtime="20240714 18:52:31.905"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.905" endtime="20240714 18:52:31.906"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.905" endtime="20240714 18:52:31.906"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.733" endtime="20240714 18:52:31.907"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=15</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.925" level="INFO">Text: 'Java (programming language)'</msg>
+<msg timestamp="20240714 18:52:31.925" level="INFO">${text} = Java (programming language)</msg>
+<status status="PASS" starttime="20240714 18:52:31.907" endtime="20240714 18:52:31.925"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.927" endtime="20240714 18:52:31.927"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.927" endtime="20240714 18:52:31.927"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.927" endtime="20240714 18:52:31.927"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.907" endtime="20240714 18:52:31.927"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=16</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:31.948" level="INFO">Text: 'Java Tutorial | Learn Java Programming'</msg>
+<msg timestamp="20240714 18:52:31.949" level="INFO">${text} = Java Tutorial | Learn Java Programming</msg>
+<status status="PASS" starttime="20240714 18:52:31.927" endtime="20240714 18:52:31.949"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:31.949" endtime="20240714 18:52:31.949"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:31.949" endtime="20240714 18:52:31.949"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:31.949" endtime="20240714 18:52:31.949"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:31.927" endtime="20240714 18:52:31.949"/>
+</iter>
+<status status="PASS" starttime="20240714 18:52:31.439" endtime="20240714 18:52:31.949"/>
+</for>
 <kw name="Click" library="Browser">
 <arg>xpath=${googlelogo}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20240714 01:16:35.331" level="INFO">Clicks the element 'xpath=//img[@Class='jfN4p']'.</msg>
-<status status="PASS" starttime="20240714 01:16:35.331" endtime="20240714 01:16:35.761"/>
+<msg timestamp="20240714 18:52:31.949" level="INFO">Clicks the element 'xpath=//img[@Class='jfN4p']'.</msg>
+<status status="PASS" starttime="20240714 18:52:31.949" endtime="20240714 18:52:32.260"/>
 </kw>
-<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:35.761"/>
+<status status="PASS" starttime="20240714 18:52:30.242" endtime="20240714 18:52:32.261"/>
 </iter>
 <iter>
 <var name="${i}">1</var>
@@ -121,8 +612,8 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20240714 01:16:35.761" level="INFO">Fills the text 'Python' in the given field.</msg>
-<status status="PASS" starttime="20240714 01:16:35.761" endtime="20240714 01:16:36.259"/>
+<msg timestamp="20240714 18:52:32.262" level="INFO">Fills the text 'Python' in the given field.</msg>
+<status status="PASS" starttime="20240714 18:52:32.261" endtime="20240714 18:52:32.965"/>
 </kw>
 <kw name="Keyboard Key" library="Browser">
 <arg>press</arg>
@@ -130,31 +621,109 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
-<status status="PASS" starttime="20240714 01:16:36.259" endtime="20240714 01:16:36.270"/>
+<status status="PASS" starttime="20240714 18:52:32.965" endtime="20240714 18:52:32.980"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>xpath=${searchbtn}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20240714 01:16:36.270" level="INFO">Clicks the element 'xpath=(//input[@name='btnK'])[2]'.</msg>
-<status status="PASS" starttime="20240714 01:16:36.270" endtime="20240714 01:16:36.486"/>
+<msg timestamp="20240714 18:52:32.980" level="INFO">Clicks the element 'xpath=(//input[@name='btnK'])[2]'.</msg>
+<status status="PASS" starttime="20240714 18:52:32.980" endtime="20240714 18:52:33.304"/>
 </kw>
 <kw name="Take Screenshot" library="Browser">
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<msg timestamp="20240714 01:16:36.640" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240714 01:16:36.486" endtime="20240714 01:16:36.640"/>
+<msg timestamp="20240714 18:52:33.498" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-2.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-2.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240714 18:52:33.304" endtime="20240714 18:52:33.498"/>
 </kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>xpath=(${googleSearchRecords})[1]</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20240714 18:52:33.546" level="INFO">Waited for Element with selector xpath=(//h3[@class='LC20lb MBeuO DKV0Md'])[1] at state visible</msg>
+<status status="PASS" starttime="20240714 18:52:33.498" endtime="20240714 18:52:33.546"/>
+</kw>
+<kw name="Get Elements" library="Browser">
+<var>${g_results}</var>
+<arg>xpath=${googleSearchRecords}</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<msg timestamp="20240714 18:52:33.562" level="INFO">Found locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').first(),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(1) Locators successfully.</msg>
+<msg timestamp="20240714 18:52:33.564" level="INFO">${g_results} = ["xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=0", "xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=1"]</msg>
+<status status="PASS" starttime="20240714 18:52:33.546" endtime="20240714 18:52:33.564"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{g_results}</value>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=0</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:33.676" level="INFO">Text: 'Welcome to Python.org'</msg>
+<msg timestamp="20240714 18:52:33.677" level="INFO">${text} = Welcome to Python.org</msg>
+<status status="PASS" starttime="20240714 18:52:33.564" endtime="20240714 18:52:33.677"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:33.677" endtime="20240714 18:52:33.677"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:33.677" endtime="20240714 18:52:33.677"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:33.677" endtime="20240714 18:52:33.677"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:33.564" endtime="20240714 18:52:33.677"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=1</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:33.698" level="INFO">Text: 'Python Tutorial'</msg>
+<msg timestamp="20240714 18:52:33.699" level="INFO">${text} = Python Tutorial</msg>
+<status status="PASS" starttime="20240714 18:52:33.678" endtime="20240714 18:52:33.699"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:33.699" endtime="20240714 18:52:33.700"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:33.699" endtime="20240714 18:52:33.700"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:33.699" endtime="20240714 18:52:33.700"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:33.677" endtime="20240714 18:52:33.700"/>
+</iter>
+<status status="PASS" starttime="20240714 18:52:33.564" endtime="20240714 18:52:33.700"/>
+</for>
 <kw name="Click" library="Browser">
 <arg>xpath=${googlelogo}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20240714 01:16:36.640" level="INFO">Clicks the element 'xpath=//img[@Class='jfN4p']'.</msg>
-<status status="PASS" starttime="20240714 01:16:36.640" endtime="20240714 01:16:37.199"/>
+<msg timestamp="20240714 18:52:33.700" level="INFO">Clicks the element 'xpath=//img[@Class='jfN4p']'.</msg>
+<status status="PASS" starttime="20240714 18:52:33.700" endtime="20240714 18:52:34.331"/>
 </kw>
-<status status="PASS" starttime="20240714 01:16:35.761" endtime="20240714 01:16:37.199"/>
+<status status="PASS" starttime="20240714 18:52:32.261" endtime="20240714 18:52:34.331"/>
 </iter>
 <iter>
 <var name="${i}">2</var>
@@ -164,8 +733,8 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
-<msg timestamp="20240714 01:16:37.199" level="INFO">Fills the text 'Selenium' in the given field.</msg>
-<status status="PASS" starttime="20240714 01:16:37.199" endtime="20240714 01:16:37.502"/>
+<msg timestamp="20240714 18:52:34.333" level="INFO">Fills the text 'Selenium' in the given field.</msg>
+<status status="PASS" starttime="20240714 18:52:34.332" endtime="20240714 18:52:34.443"/>
 </kw>
 <kw name="Keyboard Key" library="Browser">
 <arg>press</arg>
@@ -173,39 +742,286 @@
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Press a keyboard key on the virtual keyboard or set a key up or down.</doc>
-<status status="PASS" starttime="20240714 01:16:37.502" endtime="20240714 01:16:37.529"/>
+<status status="PASS" starttime="20240714 18:52:34.443" endtime="20240714 18:52:34.583"/>
 </kw>
 <kw name="Click" library="Browser">
 <arg>xpath=${searchbtn}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20240714 01:16:37.529" level="INFO">Clicks the element 'xpath=(//input[@name='btnK'])[2]'.</msg>
-<status status="PASS" starttime="20240714 01:16:37.529" endtime="20240714 01:16:37.754"/>
+<msg timestamp="20240714 18:52:34.583" level="INFO">Clicks the element 'xpath=(//input[@name='btnK'])[2]'.</msg>
+<status status="PASS" starttime="20240714 18:52:34.583" endtime="20240714 18:52:35.083"/>
 </kw>
 <kw name="Take Screenshot" library="Browser">
 <tag>PageContent</tag>
 <doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<msg timestamp="20240714 01:16:37.928" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240714 01:16:37.754" endtime="20240714 01:16:37.928"/>
+<msg timestamp="20240714 18:52:35.357" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-3.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-3.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240714 18:52:35.087" endtime="20240714 18:52:35.357"/>
 </kw>
+<kw name="Wait For Elements State" library="Browser">
+<arg>xpath=(${googleSearchRecords})[1]</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<msg timestamp="20240714 18:52:35.374" level="INFO">Waited for Element with selector xpath=(//h3[@class='LC20lb MBeuO DKV0Md'])[1] at state visible</msg>
+<status status="PASS" starttime="20240714 18:52:35.357" endtime="20240714 18:52:35.374"/>
+</kw>
+<kw name="Get Elements" library="Browser">
+<var>${g_results}</var>
+<arg>xpath=${googleSearchRecords}</arg>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns a reference to Playwright [https://playwright.dev/docs/api/class-locator|Locator]
+for all matched elements by ``selector``.</doc>
+<msg timestamp="20240714 18:52:35.451" level="INFO">Found locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').first(),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(1),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(2),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(3),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(4),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(5),locator('//h3[@class=\'LC20lb MBeuO DKV0Md\']').nth(6) Locators successfully.</msg>
+<msg timestamp="20240714 18:52:35.451" level="INFO">${g_results} = ["xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=0", "xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=1", "xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=2", "xpath=//h3[@class='LC20lb MBeuO DKV0Md'...</msg>
+<status status="PASS" starttime="20240714 18:52:35.374" endtime="20240714 18:52:35.451"/>
+</kw>
+<for flavor="IN">
+<var>${element}</var>
+<value>@{g_results}</value>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=0</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:35.472" level="INFO">Text: 'Selenium'</msg>
+<msg timestamp="20240714 18:52:35.472" level="INFO">${text} = Selenium</msg>
+<status status="PASS" starttime="20240714 18:52:35.452" endtime="20240714 18:52:35.472"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:35.472" endtime="20240714 18:52:35.479"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:35.472" endtime="20240714 18:52:35.479"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:35.472" endtime="20240714 18:52:35.479"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:35.452" endtime="20240714 18:52:35.479"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=1</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:35.497" level="INFO">Text: 'Selenium Testing: Detailed Guide'</msg>
+<msg timestamp="20240714 18:52:35.498" level="INFO">${text} = Selenium Testing: Detailed Guide</msg>
+<status status="PASS" starttime="20240714 18:52:35.479" endtime="20240714 18:52:35.498"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:35.498" endtime="20240714 18:52:35.498"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:35.498" endtime="20240714 18:52:35.498"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:35.498" endtime="20240714 18:52:35.498"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:35.479" endtime="20240714 18:52:35.498"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=2</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:35.553" level="INFO">Text: 'SeleniumHQ/selenium: A browser automation framework ...'</msg>
+<msg timestamp="20240714 18:52:35.553" level="INFO">${text} = SeleniumHQ/selenium: A browser automation framework ...</msg>
+<status status="PASS" starttime="20240714 18:52:35.498" endtime="20240714 18:52:35.553"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:35.553" endtime="20240714 18:52:35.553"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:35.553" endtime="20240714 18:52:35.553"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:35.553" endtime="20240714 18:52:35.553"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:35.498" endtime="20240714 18:52:35.553"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=3</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:35.806" level="INFO">Text: 'Selenium Webdriver Tutorial in Java with Examples | BrowserStack'</msg>
+<msg timestamp="20240714 18:52:35.806" level="INFO">${text} = Selenium Webdriver Tutorial in Java with Examples | BrowserStack</msg>
+<status status="PASS" starttime="20240714 18:52:35.557" endtime="20240714 18:52:35.806"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:35.806" endtime="20240714 18:52:35.806"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:35.806" endtime="20240714 18:52:35.806"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:35.806" endtime="20240714 18:52:35.806"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:35.557" endtime="20240714 18:52:35.806"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=4</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:35.826" level="INFO">Text: 'Selenium Test Automation: Choosing the Right Programming Language ...'</msg>
+<msg timestamp="20240714 18:52:35.826" level="INFO">${text} = Selenium Test Automation: Choosing the Right Programming Language ...</msg>
+<status status="PASS" starttime="20240714 18:52:35.806" endtime="20240714 18:52:35.826"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:35.826" endtime="20240714 18:52:35.826"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:35.826" endtime="20240714 18:52:35.826"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:35.826" endtime="20240714 18:52:35.826"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:35.806" endtime="20240714 18:52:35.826"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=5</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:35.845" level="INFO">Text: 'Selenium Testing: Detailed Guide'</msg>
+<msg timestamp="20240714 18:52:35.845" level="INFO">${text} = Selenium Testing: Detailed Guide</msg>
+<status status="PASS" starttime="20240714 18:52:35.828" endtime="20240714 18:52:35.845"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:35.845" endtime="20240714 18:52:35.845"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:35.845" endtime="20240714 18:52:35.845"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:35.845" endtime="20240714 18:52:35.845"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:35.826" endtime="20240714 18:52:35.845"/>
+</iter>
+<iter>
+<var name="${element}">xpath=//h3[@class='LC20lb MBeuO DKV0Md'] &gt;&gt; nth=6</var>
+<kw name="Get Text" library="Browser">
+<var>${text}</var>
+<arg>${element}</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<msg timestamp="20240714 18:52:35.865" level="INFO">Text: 'SeleniumHQ/selenium: A browser automation framework ...'</msg>
+<msg timestamp="20240714 18:52:35.865" level="INFO">${text} = SeleniumHQ/selenium: A browser automation framework ...</msg>
+<status status="PASS" starttime="20240714 18:52:35.847" endtime="20240714 18:52:35.865"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${text}&quot; != &quot;&quot;">
+<kw name="Append To List" library="Collections">
+<arg>${All_Records}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:35.866" endtime="20240714 18:52:35.866"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:35.866" endtime="20240714 18:52:35.866"/>
+</branch>
+<status status="PASS" starttime="20240714 18:52:35.865" endtime="20240714 18:52:35.866"/>
+</if>
+<status status="PASS" starttime="20240714 18:52:35.847" endtime="20240714 18:52:35.866"/>
+</iter>
+<status status="PASS" starttime="20240714 18:52:35.451" endtime="20240714 18:52:35.866"/>
+</for>
 <kw name="Click" library="Browser">
 <arg>xpath=${googlelogo}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<msg timestamp="20240714 01:16:37.928" level="INFO">Clicks the element 'xpath=//img[@Class='jfN4p']'.</msg>
-<status status="PASS" starttime="20240714 01:16:37.928" endtime="20240714 01:16:38.459"/>
+<msg timestamp="20240714 18:52:35.866" level="INFO">Clicks the element 'xpath=//img[@Class='jfN4p']'.</msg>
+<status status="PASS" starttime="20240714 18:52:35.866" endtime="20240714 18:52:36.602"/>
 </kw>
-<status status="PASS" starttime="20240714 01:16:37.199" endtime="20240714 01:16:38.459"/>
+<status status="PASS" starttime="20240714 18:52:34.332" endtime="20240714 18:52:36.602"/>
 </iter>
-<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:38.460"/>
+<status status="PASS" starttime="20240714 18:52:30.242" endtime="20240714 18:52:36.602"/>
 </for>
-<status status="PASS" starttime="20240714 01:16:34.824" endtime="20240714 01:16:38.460"/>
+<kw name="Log" library="BuiltIn">
+<arg>${All_Records}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240714 18:52:36.603" level="INFO">['Java | Oracle', 'Java Tutorial', 'Java.Oracle.com', 'Java Downloads', 'What is Java? - Java Programming Language Explained - AWS', 'Increment and Decrement Operators in Java - Dummies.com', 'How to Program in Java: 3 Steps (with Pictures) - wikiHow', 'What Is Java? - IBM', 'What Is The Future Of Java Developers - SkillVertex', 'Is Java Difficult to Learn? Explore the Challenges! - Simplilearn.com', 'What is Java Used For in 2023? The Java Programming Language and ...', 'What is the full form of Java? - Tutorialspoint', "What is Java?—Beginner's Guide to Java | Microsoft Azure", 'What Is Java? - IBM', 'Java Tutorial', 'Java (programming language)', 'Java Tutorial | Learn Java Programming', 'Welcome to Python.org', 'Python Tutorial', 'Selenium', 'Selenium Testing: Detailed Guide', 'SeleniumHQ/selenium: A browser automation framework ...', 'Selenium Webdriver Tutorial in Java with Examples | BrowserStack', 'Selenium Test Automation: Choosing the Right Programming Language ...', 'Selenium Testing: Detailed Guide', 'SeleniumHQ/selenium: A browser automation framework ...']</msg>
+<status status="PASS" starttime="20240714 18:52:36.603" endtime="20240714 18:52:36.603"/>
 </kw>
-<status status="PASS" starttime="20240714 01:16:29.179" endtime="20240714 01:16:38.462"/>
+<msg timestamp="20240714 18:52:36.603" level="INFO">${exceldata} = ['Java | Oracle', 'Java Tutorial', 'Java.Oracle.com', 'Java Downloads', 'What is Java? - Java Programming Language Explained - AWS', 'Increment and Decrement Operators in Java - Dummies.com', 'How to ...</msg>
+<status status="PASS" starttime="20240714 18:52:30.235" endtime="20240714 18:52:36.603"/>
+</kw>
+<kw name="Write To Excel" library="util">
+<arg>data=${exceldata}</arg>
+<status status="PASS" starttime="20240714 18:52:36.603" endtime="20240714 18:52:36.635"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:30.235" endtime="20240714 18:52:36.635"/>
+</kw>
+<kw name="Show records" library="keywords">
+<kw name="Create List" library="BuiltIn">
+<var>@{itemlist}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20240714 18:52:36.635" level="INFO">@{itemlist} = [ ]</msg>
+<status status="PASS" starttime="20240714 18:52:36.635" endtime="20240714 18:52:36.635"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${itemlist}</arg>
+<arg>Get searched records from google</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20240714 18:52:36.635" endtime="20240714 18:52:36.635"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${itemlist}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240714 18:52:36.635" level="INFO">['Get searched records from google']</msg>
+<status status="PASS" starttime="20240714 18:52:36.635" endtime="20240714 18:52:36.635"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:36.635" endtime="20240714 18:52:36.635"/>
+</kw>
+<status status="PASS" starttime="20240714 18:52:24.898" endtime="20240714 18:52:36.635"/>
 </test>
-<status status="PASS" starttime="20240714 01:16:26.921" endtime="20240714 01:16:38.574"/>
+<status status="PASS" starttime="20240714 18:52:23.452" endtime="20240714 18:52:36.766"/>
 </suite>
 <statistics>
 <total>
@@ -218,6 +1034,6 @@
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240714 01:16:29.193" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg timestamp="20240714 18:52:24.898" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
 </errors>
 </robot>

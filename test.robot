@@ -2,6 +2,7 @@
 Resource        keywords.robot
 
 *** Test Cases ***
-TC01 - Navigate to google.com
+TC01 - Add all the records fetched from google search to excel
     Open Browser and Navigate to google
-    Search from excel
+    Add Searched Records to Excel
+    Show records
